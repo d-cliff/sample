@@ -1,6 +1,6 @@
 # Project Summary
 
-**Project Link:** [https://sample.dylancliff.dev/](https://sample.dylancliff.dev/){target="_blank"}
+**Project Link:** <a href="https://sample.dylancliff.dev/" target="_blank">https://sample.dylancliff.dev/</a>
 
 Here is some sample code showcasing the tasks you wanted me to complete. To be honest, I love ACF and use it 99% of the time. But for these tasks, you wanted me to use the Gutenberg FSE, which I have limited experience in. I was skeptical at first, but in the end, it was really fun! It went a lot smoother than I thought it would. Hopefully my sample code is up to your standards and demonstrates how versatile I can be. I’m a quick learner! I enjoy learning and testing new technologies.
 
