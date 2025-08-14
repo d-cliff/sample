@@ -1,0 +1,63 @@
+/* Styling the site title with a typing effect */
+.wp-block-site-title {
+    font-family: monospace;
+    font-size: 2rem;
+    line-height: 1;
+    overflow: hidden;
+    white-space: nowrap; 
+    border-right: 3px solid #000;
+    width: 0;
+    max-width: max-content;
+    text-align: left;
+    margin: 0;
+    display: block;
+    animation: typing 5s steps(50, end) forwards, blink-caret 5s steps(50, end) forwards;
+}
+
+/* Styling the current date with a typing effect, starting after site title */
+.current-date p {
+    font-family: monospace;
+    font-size: 1.5rem;
+    line-height: 1;
+    overflow: hidden;
+    white-space: nowrap; 
+    border-right: none;
+    width: 0;
+    max-width: max-content;
+    text-align: left;
+    margin: 0;
+    display: block;
+    animation: typing 5s steps(50, end) forwards 3s, blink-caret 5s steps(50, end) forwards 3s;
+}
+
+/* Styling the CTA with a fade-in and slide-up effect, starting after current date */
+.wp-block-create-block-custom-cta {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade-slide-up 1s ease-in forwards 5s;
+}
+
+/* Typing animation based on content width */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Blinking cursor effect, controls border visibility and removal */
+@keyframes blink-caret {
+    0% { border-right: 3px solid #000; }
+    1%, 50% { border-right: 3px solid #000; }
+    51%, 100% { border-right: none; }
+}
+
+/* Fade-in and slide-up animation for CTA */
+@keyframes fade-slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

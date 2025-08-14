@@ -1,0 +1,103 @@
+.wp-block-create-block-custom-cta {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+
+	// Style image container
+	.cta-image-container {
+		position: relative;
+		align-self: stretch;
+		width: 70%;
+		background: #e5e5e5;
+		border-radius: 16px;
+		overflow: hidden;
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			transition: transform .3s ease-in-out;
+			transform: scale(1);
+		}
+	}
+
+	// Style text and button container
+	.cta-text-container {
+		z-index: 2;
+		box-sizing: border-box;
+		width: 50%;
+		margin: 50px 0 50px -20%;
+		padding: 50px 32px;
+		background: #fff;
+		box-shadow: 4px 0px 20px rgb(#000, .15);
+		border-radius: 16px;
+		transition: transform .3s ease-in-out;
+		transform: translateX(10%) scale(.75); // Slide right and shrink
+
+		h2 {
+			margin-top: 0;
+		}
+	}
+	
+	.wp-element-button {
+		display: inline-block;
+	}
+
+	// Hover effect for image and text containers
+	&:hover {
+
+		.cta-image-container img {
+			transform: scale(1.25);
+		}
+
+		.cta-text-container {
+			transform: translateX(0) scale(1);
+		}
+	}
+
+	// Add styles for a text left variant based on classname
+	&.variant-text-left {
+		flex-direction: row-reverse;
+
+		.cta-image-container {
+			justify-content: flex-end;
+		}
+
+		.cta-text-container {
+			margin-left: 0%;
+			margin-right: -10%;
+		}
+
+		&:hover {
+			+ .cta-text-container {
+				transform: translateX(-10%) scale(1);
+			}
+		}
+	}
+
+	// Add responsive styles to stack on mobile for both layout variants
+	@media (max-width: 768px) {
+		&.variant-text-left, &.variant-text-right {
+			flex-direction: column;
+
+			.cta-image-container {
+				width: 100%;
+				aspect-ratio: 1.25;
+
+				img {
+					transform: scale(1);
+				}
+			}
+	
+			.cta-text-container {
+				width: 90%;
+				margin: -50px 0 0;
+				transform: translateX(0);
+			}
+		}
+	}
+}
