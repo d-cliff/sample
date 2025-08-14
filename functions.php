@@ -1,8 +1,11 @@
 <?php
+// Child Theme Version
+define('CHILD_THEME_VERSION', '1.0.0');
+
 // Adding Styles
 function twentytwentyfive_child_enqueue_styles() {
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
-    wp_enqueue_style('animations-style', get_stylesheet_directory_uri() . '/css/animations.css');
+    wp_enqueue_style('animations-style', get_stylesheet_directory_uri() . '/css/animations.css', array(), CHILD_THEME_VERSION);
 }
 add_action('wp_enqueue_scripts', 'twentytwentyfive_child_enqueue_styles');
 

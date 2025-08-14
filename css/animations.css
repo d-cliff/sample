@@ -3,15 +3,16 @@
     font-family: monospace;
     font-size: 2rem;
     line-height: 1;
-    overflow: hidden;
-    white-space: nowrap; 
-    border-right: 3px solid #000;
-    width: 0;
-    max-width: max-content;
-    text-align: left;
-    margin: 0;
     display: block;
-    animation: typing 5s steps(50, end) forwards, blink-caret 5s steps(50, end) forwards;
+
+    @media (min-width: 768px) {
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 3px solid #000;
+        width: 0;
+        max-width: max-content;
+        animation: typing 5s steps(50, end) forwards, blink-caret 5s steps(50, end) forwards;
+    }
 }
 
 /* Styling the current date with a typing effect, starting after site title */
@@ -19,22 +20,26 @@
     font-family: monospace;
     font-size: 1.5rem;
     line-height: 1;
-    overflow: hidden;
-    white-space: nowrap; 
-    border-right: none;
-    width: 0;
-    max-width: max-content;
-    text-align: left;
-    margin: 0;
     display: block;
-    animation: typing 5s steps(50, end) forwards 3s, blink-caret 5s steps(50, end) forwards 3s;
+
+    @media (min-width: 768px) {
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: none;
+        width: 0;
+        max-width: max-content;
+        animation: typing 5s steps(50, end) forwards 3s, blink-caret 5s steps(50, end) forwards 3s;
+    }
 }
 
 /* Styling the CTA with a fade-in and slide-up effect, starting after current date */
 .wp-block-create-block-custom-cta {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fade-slide-up 1s ease-in forwards 5s;
+
+    @media (min-width: 768px) {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fade-slide-up 1s ease-in forwards 5s;
+    }
 }
 
 /* Typing animation based on content width */
